@@ -132,8 +132,6 @@ if (isset($_FILES['AVATAR']) && $_FILES['AVATAR']['error'] === 0) {
         $this->data->command_prepare($sql, "sssssss", $TENNV,$HOTEN ,$SDT, $EMAIL, $avatarPath,$NGAYLAM,$NS);
         return $this->data->execute();
     }
-}
-
     public function xoaNhanVien($MANV) {
         $sql = "DELETE FROM nhan_vien WHERE MANV = ?";
         $this->data->command_prepare($sql, 'i', $MANV);
